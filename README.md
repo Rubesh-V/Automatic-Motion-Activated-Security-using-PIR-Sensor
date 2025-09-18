@@ -60,10 +60,41 @@ Step 7: Save Your Work
 
 
 # Code:
+```
+// C++ code
+//
+int sensorState = 0;
 
+void setup()
+{
+  pinMode(2, INPUT);
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop()
+{
+  // read the state of the sensor/digital input
+  sensorState = digitalRead(2);
+  // check if sensor pin is HIGH. if it is, set the
+  // LED on.
+  if (sensorState == HIGH) {
+    digitalWrite(LED_BUILTIN, HIGH);
+  } else {
+    digitalWrite(LED_BUILTIN, LOW);
+  }
+  delay(10); // Delay a little bit to improve simulation performance
+}
+
+```
 
 
 # Output:
+
+![WhatsApp Image 2025-09-18 at 13 43 01_63dd5e6e](https://github.com/user-attachments/assets/f2b69ee6-f706-49d6-b69b-c20aa2774043)
+
+
+https://github.com/user-attachments/assets/1782a0bb-0e73-4b6e-aec0-958101111e3c
+
 
 
 
